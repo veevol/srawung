@@ -1,23 +1,23 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono, Space_Grotesk } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "700", "800"],
 });
 
 const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "SRAWUNG — Coming Soon | IAI Gunungkidul × PIEYO PD DIY",
+  title: "SRAWUNG - IAI Gunungkidul",
   description:
-    "Seminar & Konferensi Cabang IAI Gunungkidul 2026. Tema: AI Toolkit for Pharmacists. Sabtu, 6 Desember 2026 — Gunungkidul, DIY.",
+    "Seminar & Konferensi Cabang IAI Gunungkidul 2026 — AI Toolkit for Pharmacists. Sabtu, 6 Desember 2026 — Gunungkidul, DIY.",
 };
 
 export default function RootLayout({
@@ -28,9 +28,11 @@ export default function RootLayout({
   return (
     <html
       lang="id"
-      className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} h-full antialiased`}
+      className={`${inter.variable} ${jetbrainsMono.variable} h-full`}
     >
-      <body className="min-h-full font-sans">{children}</body>
+      <body className="h-full bg-brand-dark font-sans text-white selection:bg-brand-accent selection:text-brand-dark">
+        {children}
+      </body>
     </html>
   );
 }
