@@ -30,7 +30,7 @@ export default function RootLayout({
       lang="id"
       className={`${inter.variable} ${jetbrainsMono.variable} h-full`}
     >
-      <body className="h-full bg-brand-dark font-sans text-white selection:bg-brand-accent selection:text-brand-dark">
+      <body className="min-h-dvh bg-brand-dark font-sans text-white antialiased selection:bg-brand-accent selection:text-brand-dark">
         {children}
       </body>
     </html>

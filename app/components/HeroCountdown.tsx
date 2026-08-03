@@ -42,17 +42,17 @@ export default function HeroCountdown() {
   }, []);
 
   return (
-    <main className="relative flex h-full w-full flex-col justify-end overflow-hidden">
+    <main className="relative flex min-h-dvh w-full flex-col justify-end overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
           alt="AI Toolkit visualization"
-          className="object-cover"
+          className="object-cover object-center"
           src="/hero.png"
           fill
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/60 to-transparent" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/60 to-transparent" />
       </div>
 
       <section className="relative z-10 max-w-2xl space-y-8 p-6 md:p-12">
