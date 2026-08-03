@@ -13,11 +13,12 @@ type TimeLeft = {
 
 function getTimeLeft(): TimeLeft {
   const diff = Math.max(0, TARGET - Date.now());
-  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-  const minutes = Math.floor((diff / (1000 * 60)) % 60);
-  const seconds = Math.floor((diff / 1000) % 60);
-  return { days, hours, minutes, seconds };
+  return {
+    days: Math.floor(diff / (1000 * 60 * 60 * 24)),
+    hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
+    minutes: Math.floor((diff / (1000 * 60)) % 60),
+    seconds: Math.floor((diff / 1000) % 60),
+  };
 }
 
 function pad(n: number) {
@@ -32,27 +33,28 @@ const UNITS: { key: keyof TimeLeft; label: string }[] = [
 ];
 
 export default function Countdown() {
-  const [time, setTime] = useState<TimeLeft | null>(null);
+  const [time, setTime] = useState<TimeLeft>(getTimeLeft);
 
   useEffect(() => {
-    setTime(getTimeLeft());
     const id = setInterval(() => setTime(getTimeLeft()), 1000);
     return () => clearInterval(id);
   }, []);
-
-  const display = time ?? { days: 0, hours: 0, minutes: 0, seconds: 0 };
 
   return (
     <div
       className="mt-8 grid grid-cols-4 gap-3 sm:gap-4"
       aria-live="polite"
       aria-label="Hitung mundur menuju SRAWUNG"
+      suppressHydrationWarning
     >
       {UNITS.map(({ key, label }) => (
         <div key={key} className="flex flex-col items-center gap-2">
           <div className="relative w-full text-center">
-            <span className="font-mono text-[clamp(1.75rem,5vw,2.75rem)] font-semibold leading-none tracking-tight text-ink tabular-nums">
-              {key === "days" ? display[key] : pad(display[key])}
+            <span
+              className="font-mono text-[clamp(1.75rem,5vw,2.75rem)] font-semibold leading-none tracking-tight text-ink tabular-nums"
+              suppressHydrationWarning
+            >
+              {key === "days" ? time[key] : pad(time[key])}
             </span>
             <span
               aria-hidden
