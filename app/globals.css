@@ -7,8 +7,3 @@
   --font-sans: var(--font-inter);
   --font-mono: var(--font-jetbrains-mono);
 }
-
-html,
-body {
-  height: 100%;
-}
