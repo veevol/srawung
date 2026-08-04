@@ -45,7 +45,7 @@
 
   /* Title block → description */
   main > section > div:nth-child(2) {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 
   /* Keep description paragraph readable when it wraps */
@@ -56,7 +56,7 @@
 
   /* Description → date */
   main > section > div:nth-child(2) > :not([hidden]) ~ :not([hidden]) {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 
   /* Date → countdown */

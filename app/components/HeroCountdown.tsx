@@ -71,10 +71,11 @@ export default function HeroCountdown() {
           </h1>
         </div>
 
-        <div className="mt-4 space-y-4">
+        <div className="mt-6 space-y-6">
           <p className="text-lg leading-relaxed text-gray-200 md:text-xl">
-            Seminar &amp; Konferensi Cabang IAI Gunungkidul 2026 — menghadirkan
-            tema{" "}
+            Seminar &amp; Konferensi Cabang Ikatan Apoteker Indonesia
+            <br />
+            Tema :{" "}
             <span className="font-medium text-brand-accent italic">
               &ldquo;AI Toolkit for Pharmacists.&rdquo;
             </span>
