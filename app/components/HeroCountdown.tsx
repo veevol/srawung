@@ -55,7 +55,7 @@ export default function HeroCountdown() {
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/60 to-transparent" />
       </div>
 
-      <section className="relative z-10 max-w-2xl space-y-8 p-6 md:p-12">
+      <section className="relative z-10 max-w-2xl p-6 md:p-12">
         <div className="space-y-2">
           <div className="flex items-center gap-3">
             <span className="relative flex h-2.5 w-2.5">
@@ -66,12 +66,12 @@ export default function HeroCountdown() {
               PC IAI GUNUNGKIDUL
             </p>
           </div>
-          <h1 className="text-6xl leading-none font-extrabold tracking-tighter uppercase md:text-8xl">
+          <h1 className="title-srawung uppercase">
             SRAWUNG
           </h1>
         </div>
 
-        <div className="space-y-4">
+        <div className="mt-4 space-y-4">
           <p className="text-lg leading-relaxed text-gray-200 md:text-xl">
             Seminar &amp; Konferensi Cabang IAI Gunungkidul 2026 — menghadirkan
             tema{" "}
@@ -89,7 +89,7 @@ export default function HeroCountdown() {
         </div>
 
         <div
-          className="grid grid-cols-4 gap-4 pt-4"
+          className="mt-8 grid grid-cols-4 gap-4 pt-4"
           aria-live="polite"
           aria-label="Hitung mundur menuju SRAWUNG"
         >
