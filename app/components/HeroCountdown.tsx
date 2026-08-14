@@ -81,7 +81,7 @@ export default function HeroCountdown() {
             </span>
           </p>
           <div className="flex items-center gap-2 font-mono text-sm tracking-tight text-brand-accent/90">
-            <span>SABTU</span>
+            <span>MINGGU</span>
             <span className="opacity-40">·</span>
             <span>06 DES 2026</span>
             <span className="opacity-40">·</span>

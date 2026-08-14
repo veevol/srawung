@@ -23,7 +23,7 @@ const orbitron = Orbitron({
 export const metadata: Metadata = {
   title: "SRAWUNG - IAI Gunungkidul",
   description:
-    "Seminar & Konferensi Cabang IAI Gunungkidul 2026 — AI Toolkit for Pharmacists. Sabtu, 6 Desember 2026 — Gunungkidul, DIY.",
+    "Seminar & Konferensi Cabang IAI Gunungkidul 2026 — AI Toolkit for Pharmacists. Minggu, 6 Desember 2026 — Gunungkidul, DIY.",
 };
 
 export default function RootLayout({
